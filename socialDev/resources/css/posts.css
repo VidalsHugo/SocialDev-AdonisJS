@@ -1,0 +1,260 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+.posts {
+  border-bottom: 1.5px solid var(--color-border);
+}
+
+
+.posts p {
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.posts ul li {
+  list-style: none;
+}
+
+.posts a {
+  text-decoration: none;
+  user-select: none;
+  user-select: text;
+}
+
+.post{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.all-data{
+  display: flex;
+  flex-direction: row;
+}
+
+.photo-data{
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.664);
+}
+.photo-data img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  
+}
+
+.foto{
+  height: 100%;
+}
+.foto img{
+  border-radius: 50px;
+  margin-top: 15px;
+  width: 55px;
+  height: 55px;
+}
+.content{
+  padding: 10px;
+}
+.data-content{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background-color: rgb(162, 162, 230);
+  width: 100%;
+}
+.posts .post {
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-border);
+  padding: 15px;
+  text-align: justify;
+  width: inherit;
+}
+
+.posts .post a{
+  padding: 0px;
+  margin: 0px;
+}
+.posts #user{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.posts #email{
+  font-size: 1.2rem;
+  
+}
+#data{
+  padding-left: 10px;
+}
+
+.posts #title-post {
+  font-size: 1rem; 
+  font-weight: bolder;
+  color: var(--color-text); 
+}
+
+.posts #content-post {
+  position: relative;
+  top: -15px;
+  font-size: 0.8rem;
+  color: var(--color-text);
+  white-space: pre-line;
+}
+
+.posts #data_post{
+  padding: 0px;
+  margin: 0px;
+  right: 0px;
+  font-size: 9px;
+}
+
+.posts .mostrar_mais{
+  position: relative;
+  top: -15px;
+  color:var(--color-1);
+}
+
+.posts .mostrar_mais:hover{
+  text-decoration: underline;
+}
+
+
+.post .create{
+  display: flex;
+  align-items: center;
+}
+
+.posts .create p {
+  display: inline-block; 
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container svg  {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  transition: all 0.3s;
+}
+
+.container svg:hover {
+  transform: scale(1.1);
+}
+
+.container input:checked ~ svg {
+  fill: #E3474F;
+}
+
+.like{
+  display: flex;
+  cursor: pointer;
+}
+
+.dislike{
+  display: flex;
+  cursor: pointer;
+}
+
+.countLike {
+  padding-left: 10px;
+  align-items: center;
+}
+
+.countLike p{
+  color: var(--color-text);
+}
+
+
+.marginModal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  z-index: 9998; 
+  display: none;
+}
+
+.modalLikes {
+  flex-direction: column;
+  position: fixed; 
+  top: 20vh; 
+  left: 35vw; 
+  right: 35vw;
+  bottom: 10vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: 1.5px solid var(--color-border);
+  z-index: 9999; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modalLikes .titleModal{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.modalLikes button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.modalLikes svg{
+  width: 25px;
+  justify-content: flex-end;
+}
+
+.modalLikes{
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+  
+.modalLikes ul li {
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.listUserLiked ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0px;
+}
+
+.listUserLiked p {
+  padding-left: 10px;
+  margin: 5px 0; /* Espaçamento entre cada usuário */
+}
+#email p{
+  font-size: 90px;
+}

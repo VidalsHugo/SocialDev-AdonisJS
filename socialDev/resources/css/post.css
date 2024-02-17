@@ -1,0 +1,105 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+  background-color: var(--color-background);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.post {
+  position: absolute;
+  left: 20vw;
+  right: 20vw;
+  padding: 10px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.post .creator {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  justify-content: space-between;
+}
+
+.post .creator .info {
+  display: flex;
+  align-items: center;
+}
+
+.post .creator .info p {
+  padding-left: 10px;
+}
+
+.post .creator .delete {
+  display: flex;
+  padding: 0px 10px 0px 10px;
+}
+
+
+.post #user{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.post #data_post{
+  right: 0px;
+  font-size: 9px;
+}
+
+#photo{
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+.post .title {
+  font-size: 1rem; 
+  font-weight: bolder;
+  padding: 0px 10px 0px 10px;
+  color: var(--color-text);  
+}
+  
+.post .content {
+  position: relative;
+  padding: 10px;
+  top: -40px;
+  font-size: 0.8rem;
+  color: var(--color-text);
+  white-space: pre-line;
+  text-align: justify;
+}
+
+
+.post .btn {
+  background-color: transparent;
+  position: relative;
+  border: none;
+}
+
+.post .icon {
+  transform: scale(1.2);
+  transition: .2s linear;
+}
+
+.post .btn:hover > .icon {
+  transform: scale(1.5);
+}
+
+.post .btn .icon path {
+  fill: var(--color-text);
+}
+
+.post .btn:hover > .icon path {
+  fill: rgb(168, 7, 7);
+}
+
+.post .btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -160%;
+}
+
+

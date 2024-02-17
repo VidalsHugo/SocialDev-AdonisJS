@@ -1,0 +1,151 @@
+
+
+
+.logo{
+    position: absolute;
+    transform: translate(4%, -57%);
+
+}
+.logo h2{
+    font-size: 65px;
+    color: #077bff;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.795);
+}
+.sombra{
+    width: 360px;
+    height: 10px;
+    position: absolute;
+    transform: translate(5%, -940%);
+    background-color: rgba(255, 0, 0, 0);
+    box-shadow: 10px 100px 15px 5px rgba(0, 0, 0, 0.164)
+}
+.aa{
+    margin-top: 45px;
+}
+.form-box{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 365px; /* Define a altura do corpo como 100% da viewport height */
+    background: rgb(167, 167, 167);
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.24);
+}
+
+.content{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    transform: translate(0%, -100%);
+}
+
+.icon{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    transform: translate(140%, 150%);
+}
+.icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.login-content{
+    margin-top: 60px;
+}
+
+.login h1{
+    color: #333;
+    font-weight: bolder
+}
+
+#photo-icon {
+    display: none; /* Esconde o input padrão */
+  }
+
+  .custom-button {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #ffffff00; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+
+  /* Adiciona um estilo diferente quando o botão é hover (opcional) */
+  .custom-button:hover {
+    background-color: #ffffff00; /* Cor de fundo alterada no hover */
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.664);
+  }
+
+.custom-button img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+    
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #077bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+button:hover {
+    background-color: #0251a5;
+}
+
+.cadastar{
+    padding-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #077bff;
+}
+
+a:hover{
+    font-weight: bolder;
+    color: #0251a5;
+}
+
+.error-messages {
+    padding-left: 10px;
+    color: red;
+    font-size: 12px;
+}
+
+.error-messages ul {
+    margin: 0; /* Remove a margem padrão */
+    padding-left:10px; /* Remove o preenchimento padrão */
+  }
+

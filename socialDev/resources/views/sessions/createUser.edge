@@ -1,0 +1,105 @@
+@layout('layouts/simple')
+
+@section('home')
+@entryPointStyles('simple')
+
+<script>
+  function previewImage() {
+    var input = document.getElementById('photo-icon');
+    var preview = document.getElementById('preview');
+
+    // Verifica se um arquivo foi selecionado
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      // Define a função que será chamada quando a leitura for concluída
+      reader.onload = function (e) {
+        // Atualiza o atributo src da imagem para a URL da imagem carregada
+        preview.src = e.target.result;
+      }
+
+      // Lê o conteúdo do arquivo como uma URL de dados
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+</script>
+
+
+  <div class="form-box">
+    <form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
+      
+      {{--  campo nome  --}}
+      @if (errorMessages)
+        <div class="error-messages">
+          <ul>
+            @if(errorMessages.name)
+              @each ( message in errorMessages.name )
+                <li>{{ message }}</li>
+              @endeach
+            @endif
+          </ul>
+        </div>
+      @endif
+      <div class="content">
+
+      <div class="icon">
+        <img src="photos/edit4.png" alt="">
+      </div>
+      <!-- Input escondido -->
+      <input id="photo-icon" type="file" name="photo" onchange="previewImage()">
+      <!-- Botão circular personalizado -->
+      <label for="photo-icon" class="custom-button">
+        <img id="preview" src="photos/defaultImage.jpg" alt="">
+      </label>
+    </div>
+    <div class="login-content">
+      <input type="name" name="name" placeholder="Nome" value="{{  name ? name : '' }}">
+      
+      {{--  campo email  --}}
+      @if (errorMessages)
+        <div class="error-messages">
+          <ul>
+            @if(errorMessages.email)
+              @each ( message in errorMessages.email )
+                <li>{{ message }}</li>
+              @endeach
+            @endif
+          </ul>
+        </div>
+      @endif
+      <input type="email" name="email" placeholder="Email" value="{{  email ? email : '' }}">
+      
+      {{--  campo senha  --}}
+      @if (errorMessages)
+        <div class="error-messages">
+          <ul>
+            @if(errorMessages.password)
+              @each ( message in errorMessages.password)
+                <li>{{ message }}</li>
+              @endeach
+            @endif
+          </ul>
+        </div>
+      @endif
+      <input type="password" name="password" placeholder="Password">
+      
+      {{--  campo confirmação senha  --}}
+      @if (errorMessages)
+        <div class="error-messages">
+          <ul>
+            @if(errorMessages.confirmpassword)
+              @each ( message in errorMessages.confirmpassword)
+                <li>{{ message }}</li>
+              @endeach
+            @endif
+          </ul>
+        </div>
+      @endif
+      <input type="password" name="confirmpassword" placeholder="ConfirmPassword">
+      
+      <button type="submit">Cadastrar</button>
+    </div>
+    </form>
+  </div>
+
+@endsection
